@@ -1,0 +1,422 @@
+root {
+    --primary-color: #0081a7; /* Deep Coastal Blue */
+    --secondary-color: #fca311; /* Bright Sunset Orange */
+    --text-dark: #14213d; /* Dark Navy Text */
+    --text-light: #ffffff;
+    --bg-light: #f1faee; /* Very light subtle background */
+    --bg-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 70px; /* Space for fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Utility Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.btn-primary:hover {
+    background-color: #006b8c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+.btn-secondary:hover {
+    background-color: #e6910a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark);
+}
+
+/* ======== Header & Navigation ======== */
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 70px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    font-weight: 600;
+    padding: 0.25rem 0;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* ======== Hero/Banner ======== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://placehold.co/1400x500/0081a7/ffffff?text=Mangalore+Coast') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* ======== Search Bar ======== */
+.search-bar {
+    padding: 1rem 0;
+    text-align: center;
+}
+#search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+}
+#search-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* ======== Card Grid Layout ======== */
+.content-section {
+    padding: 2rem 0;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-white);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.95rem;
+}
+.read-more {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+/* ======== Dashboard Overview (Static User Management Feature) ======== */
+#dashboard-overview {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 3rem 0;
+    margin: 4rem 0 0 0;
+}
+.metric-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.metric-card {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 250px;
+}
+.metric-card h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--secondary-color);
+}
+.metric-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ======== Detail Page Styles (Shared) ======== */
+.detail-page {
+    background-color: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+.detail-page h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+.detail-page h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+.detail-page img.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ======== Blog Specific Styles ======== */
+.post-meta {
+    color: #777;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 1rem;
+}
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #ddd;
+}
+.comment {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ======== Guide Profile Specific Styles ======== */
+.guide-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+.guide-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary-color);
+    object-fit: cover;
+}
+.guide-info h2 {
+    font-size: 2rem;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+.guide-info p {
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.guide-details {
+    margin-top: 2rem;
+}
+.recommendations li {
+    margin-bottom: 0.5rem;
+}
+
+/* ======== Forms (Contact/Stories) ======== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+input:not([type="checkbox"]):not([type="submit"]),
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* ======== Footer ======== */
+footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* ======== Responsive Design (Mobile) ======== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    header {
+        height: 60px;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1rem; }
+    .section-title { font-size: 1.8rem; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-white);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        border-top: 1px solid #eee;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 0.75rem 0;
+        text-align: center;
+    }
+    .hamburger {
+        display: block;
+    }
+    .metric-grid {
+        flex-direction: column;
+    }
+    .metric-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .detail-page {
+        padding: 1.5rem;
+    }
+    .guide-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

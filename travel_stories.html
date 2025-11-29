@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Story - Namma Kudla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======== Header and Navigation (Common) ======== -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Namma Kudla</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog_post.html">Blog</a></li>
+                    <li><a href="destination_details.html">Destinations</a></li>
+                    <li><a href="guide_profile.html">Guides</a></li>
+                    <li><a href="travel_stories.html">Share Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-page" style="max-width: 800px; margin: 2rem auto;">
+            <h2 class="section-title" style="text-align: center;">Submit Your Travel Story</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+                Did you have an unforgettable moment in Kudla? Share your anecdotes and insights with our community!
+            </p>
+            
+            <form id="story-form">
+                <div class="form-group">
+                    <label for="story-title">Story Title:</label>
+                    <input type="text" id="story-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="story-author">Your Name/Pen Name:</label>
+                    <input type="text" id="story-author" required>
+                </div>
+                <div class="form-group">
+                    <label for="story-location">Location Visited:</label>
+                    <select id="story-location">
+                        <option>Choose a location...</option>
+                        <option>Beaches (Panambur, Tannirbhavi)</option>
+                        <option>Temples (Kadri, Kudroli)</option>
+                        <option>Historical Sites (Sultan Battery)</option>
+                        <option>Food / Markets</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="story-content">Your Full Travel Story (Anecdotes & Insights):</label>
+                    <textarea id="story-content" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="story-photo">Attach a Photo (For demonstration only):</label>
+                    <input type="file" id="story-photo" accept="image/*">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Story for Review</button>
+                <p id="story-status" style="margin-top: 1rem; text-align: center;"></p>
+                <p style="text-align: center; font-size: 0.85rem; color: #777;">*Note: This form is non-functional. Data will not be stored on a server.</p>
+            </form>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

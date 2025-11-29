@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Profile: Anjali Pai - Namma Kudla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======== Header and Navigation (Common) ======== -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Namma Kudla</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog_post.html">Blog</a></li>
+                    <li><a href="destination_details.html">Destinations</a></li>
+                    <li><a href="guide_profile.html">Guides</a></li>
+                    <li><a href="travel_stories.html">Share Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="detail-page">
+            <p><a href="index.html" style="font-size: 0.9rem;">&larr; Back to Home</a></p>
+            
+            <div class="guide-header">
+                <img src="https://png.pngtree.com/background/20230519/original/pngtree-indian-actress-sai-shanthi-asha-picture-image_2656587.jpg" alt="Anjali Pai">
+                <div class="guide-info">
+                    <h2>Anjali Pai</h2>
+                    <p>Coastal Culture & Temple Historian</p>
+                    <a href="#contact-anjali" class="btn btn-primary" style="margin-top: 10px;">Send Booking Request</a>
+                </div>
+            </div>
+            
+            <div class="guide-details">
+                <h2>Expertise & Bio</h2>
+                <p>Anjali is a fourth-generation Mangalorean with a passion for preserving and sharing the traditions of the Tulu Nadu region. She specializes in the architecture of the ancient temples, the stories behind local festivals, and the connection between the sea and the people.</p>
+                <p>Fluent in Tulu, Konkani, Kannada, and English. Certified local guide since 2018.</p>
+
+                <h2>Traveler Recommendations</h2>
+                <ul class="recommendations">
+                    <li>**Best time for culture:** Visit during the *Bhootha Kola* season (December-May) for unique experiences.</li>
+                    <li>**Must-Try:** A personalized food walk through the old market area.</li>
+                </ul>
+
+                <h2>Traveler Feedback (Static Reviews)</h2>
+                <div class="comments-section">
+                    <div class="comment">
+                        <p><strong>4.9/5 Stars.</strong> "Anjali's depth of knowledge about the Kadri Temple was amazing. Highly recommend her culture tour!" - *Sarah K.*</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>5/5 Stars.</strong> "The Konkani food insights were priceless. She took us to places no tourist would ever find." - *Rajesh M.*</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Form (Contact/Booking Feature) -->
+                <h2 id="contact-anjali">Contact Anjali Directly</h2>
+                <form id="contact-form-anjali">
+                    <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+                    <div class="form-group"><textarea placeholder="I would like to book a tour focusing on..." rows="4" required></textarea></div>
+                    <button type="submit" class="btn btn-secondary" onclick="alert('Booking request sent! (Static demo)')">Submit Request</button>
+                </form>
+            </div>
+        </article>
+    </main>
+
+    <!-- ======== Footer (Common) ======== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
